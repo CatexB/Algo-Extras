@@ -1,20 +1,20 @@
 import math
-def Karatsuba(first, second, z1, z2):
+def Karatsuba(first, second):
     n = len(str(first))
-    print(n)
-    print("Current Problem: " + (first) + "*" + (second))
+    print("Current Problem: " + str(first) + "*" + str(second))
     if(n <= 2):
-        first = int(first)
-        second = int(second)
         print("HIT BASE")
         return first * second
+    else:
+        first = str(first)
+        second = str(second)
 
         n2 = int(n/2)
 
-        a = (first[0:n2])
-        b = (first[n2:])
-        c = (second[0:n2])
-        d = (second[n2:])
+        a = int((first[0:n2]))
+        b = int((first[n2:]))
+        c = int((second[0:n2]))
+        d = int((second[n2:]))
         print(a,b,c,d)
 
 
@@ -31,9 +31,11 @@ def Karatsuba(first, second, z1, z2):
         print("Current z: ", z)
 
         p1 = math.pow(10,int(n)) * x
+        print("p1 = 10^"+str(n)+"*"+str(x))
         p2 = math.pow(10, int(n/2)) * z
+        print("p2 = 10^"+str(int(n/2))+"*"+str(z))
         return(p1 + p2 + y)
 
 
 
-print(Karatsuba("20194102", "47295610"))
+print(Karatsuba("20194102", "47295610")) #Put your question here
