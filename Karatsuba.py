@@ -39,4 +39,4 @@ def Karatsuba(first, second):
 
 
 
-print(Karatsuba("20194102", "47295610")) #Put your question here
+print(Karatsuba("12345678", "12345678")) #Put your question here
