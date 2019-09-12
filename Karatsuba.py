@@ -3,6 +3,7 @@ def Karatsuba(first, second):
     n = len(str(first))
     print("Current Problem: " + str(first) + "*" + str(second))
     if(n <= 2):
+        print(first, "*", second, "=", first*second)
         print("HIT BASE")
         return first * second
     else:
@@ -34,8 +35,9 @@ def Karatsuba(first, second):
         print("p1 = 10^"+str(n)+"*"+str(x))
         p2 = math.pow(10, int(n/2)) * z
         print("p2 = 10^"+str(int(n/2))+"*"+str(z))
+        print("Current problem: ", p1,"+", p2, ",", y)
         return(p1 + p2 + y)
 
 
 
-print(Karatsuba("20194102", "47295610")) #Put your question here
+print(Karatsuba("22222222", "55555555")) #Put your question here
